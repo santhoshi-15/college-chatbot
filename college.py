@@ -53,6 +53,6 @@ if promt := st.chat_input("Type your question here...."):
   else:
     try:
       response = model.generate_content(promt)
-      st.session_state.messages..append({"role":"assistant","content": response.text})
+      st.session_state.messages.append({"role":"assistant","content": response.text})
     except Exception as e:
       st.error(f"Sorry, I couldn't generate a response. Error:{e}")
