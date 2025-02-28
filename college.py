@@ -2,7 +2,7 @@ import streamlit as at
 import pandas as ps
 import google.generativeai as genai
 from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.feature_extraction.text from TfidVectorizer
+from sklearn.feature_extraction.text import TfidVectorizer
 
 st.set_page_config(page_title="Svecw college Chatbot", layout="centered")
 
