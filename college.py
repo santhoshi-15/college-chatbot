@@ -28,12 +28,12 @@ model = genai.GenerativeModel('gemini-1.5-flash')
 
 def find_closest_question(user_query, vectorizer, question_vectors, df):
   query_vector = vectorizer.transform([user_query.lower()])
-best_match_index = similarities.argmax()
-best_match_score = similarities[best_match_index]
-if best_match_score > 0.3:
-  return df.iloc[best_match_index]['Answer']
-else:
-  return None
+  best_match_index = similarities.argmax()
+  best_match_score = similarities[best_match_index]
+  if best_match_score > 0.3:
+    return df.iloc[best_match_index]['Answer']
+  else:
+    return None
 
 st.title("Svecw college chatbot")
 st.write("Welcome to the college chatbot! Ask me anythong about the college.")
