@@ -39,7 +39,7 @@ st.title("Svecw college chatbot")
 st.write("Welcome to the college chatbot! Ask me anythong about the college.")
 
 for message in st.session_state.messages:
-  with st.chat_message(message["role"])
+  with st.chat_message(message["role"]):
     st.markdown(message["content"])
 if promt := st.chat_input("Type your question here...."):
   st.session_state.message.append({"role": "user", "content": prompt})
